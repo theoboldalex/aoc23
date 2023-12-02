@@ -17,7 +17,7 @@ BEGIN {FS="[,;:]"}
         }
     }
 
-    if (red <= 12 || green <= 13 || blue <= 14) {
+    if (red <= 12 && green <= 13 && blue <= 14) {
         print $1
         gsub(/[^0-9]/, "", $1)
         sumGames += $1
